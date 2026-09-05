@@ -30,9 +30,10 @@ const Contact = () => {
 
     setIsSending(true);
 
-    try {
+      try {
       if (!accessKey) {
-        throw new Error('VITE_WEB3FORMS_ACCESS_KEY is not configured.');
+        showAlert({ show: true, text: t.contact.errorNoKey || 'Contact form is unavailable.', type: 'error' });
+        return;
       }
 
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -123,7 +124,7 @@ const Contact = () => {
               />
             </label>
 
-            <button className="field-btn" type="submit" disabled={isSending}>
+            <button className="field-btn" type="submit" disabled={isSending || !accessKey}>
               {isSending ? t.contact.sending : t.contact.send}
 
               {!isSending && <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow up" className="field-btn_arrow" />}
