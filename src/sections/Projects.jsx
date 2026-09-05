@@ -29,6 +29,16 @@ const Projects = () => {
   const currentProject = myProjects[selectedProjectIndex];
   const projectCopy = t.projectCopies[currentProject.sourceTitle || currentProject.title] || {};
 
+  const ASSETS_BASE = import.meta.env.BASE_URL || '/';
+
+  const resolveAsset = (p) => {
+    if (!p) return '';
+    if (/^https?:\/\//.test(p) || p.startsWith('//')) return p;
+    if (p.startsWith(ASSETS_BASE)) return p;
+    if (p.startsWith('/')) return `${ASSETS_BASE}${p.slice(1)}`;
+    return `${ASSETS_BASE}${p}`;
+  };
+
   return (
     <section className="c-space my-20" id="projects">
       <div className="flex flex-wrap items-center justify-between gap-5">
@@ -41,7 +51,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
             <div className="absolute top-0 right-0 pointer-events-none">
-            <img src={currentProject.spotlight.startsWith('/') ? `${import.meta.env.BASE_URL}${currentProject.spotlight.slice(1)}` : currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl pointer-events-none" />
+            <img src={resolveAsset(currentProject.spotlight)} alt="spotlight" className="w-full h-96 object-cover rounded-xl pointer-events-none" />
           </div>
 
           <div className="flex flex-col gap-5 text-white-600 my-5">
