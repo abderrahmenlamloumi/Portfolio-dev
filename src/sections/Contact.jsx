@@ -87,7 +87,7 @@ const Contact = () => {
       {alert.show && <Alert {...alert} labels={t.alert} />}
 
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
+        <img src={`${import.meta.env.BASE_URL}assets/terminal.png`} alt="terminal background" className="absolute inset-0 min-h-screen" />
 
         <div className="contact-container">
           <h3 className="head-text">{t.contact.title}</h3>
@@ -126,7 +126,7 @@ const Contact = () => {
             <button className="field-btn" type="submit" disabled={isSending}>
               {isSending ? t.contact.sending : t.contact.send}
 
-              {!isSending && <img src="/assets/arrow-up.png" alt="arrow up" className="field-btn_arrow" />}
+              {!isSending && <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow up" className="field-btn_arrow" />}
             </button>
           </form>
         </div>

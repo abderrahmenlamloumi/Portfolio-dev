@@ -11,7 +11,7 @@ const ReviewCard = ({ item, reviewCopy, linkCopies, exploringLabel }) => (
           {item.links.map((link) => (
             <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sm text-neutral-400 hover:text-white transition-colors">
               <span>{linkCopies[link.label] || link.label}</span>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+              <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow" className="w-3 h-3" />
             </a>
           ))}
         </div>

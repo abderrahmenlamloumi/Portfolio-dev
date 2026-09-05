@@ -25,7 +25,7 @@ const About = () => {
         
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src={`${import.meta.env.BASE_URL}assets/grid1.png`} alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">{t.about.introTitle}</p>
@@ -37,7 +37,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img
-              src="assets/image.png"
+              src={`${import.meta.env.BASE_URL}assets/image.png`}
               alt="grid-2"
               className="w-full sm:h-[276px] h-fit object-contain"
             />
@@ -90,7 +90,7 @@ const About = () => {
 
             <div className="flex flex-col gap-4 mt-6">
               <a
-                href="/assets/Abderrahmen-Lamloumi-Resume.pdf"
+                href={`${import.meta.env.BASE_URL}assets/Abderrahmen-Lamloumi-Resume.pdf`}
                 download="Abderrahmen-Lamloumi-Resume.pdf"
                 className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition-colors"
               >

@@ -58,12 +58,12 @@ const AllProjects = () => {
                   <div className="flex flex-wrap justify-end gap-x-4 gap-y-2">
                     <a href={project.href} target="_blank" rel="noreferrer" className="shrink-0 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition-colors" aria-label={`${t.repository}: ${projectCopy.title || project.title}`}>
                       <span>{t.repository}</span>
-                      <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                      <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow" className="w-3 h-3" />
                     </a>
                     {project.docs && (
                       <a href={project.docs} target="_blank" rel="noreferrer" className="shrink-0 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition-colors" aria-label={`${t.documentation}: ${projectCopy.title || project.title}`}>
                         <span>{t.documentation}</span>
-                        <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                        <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow" className="w-3 h-3" />
                       </a>
                     )}
                   </div>

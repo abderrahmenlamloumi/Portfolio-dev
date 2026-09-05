@@ -8,7 +8,7 @@ const Footer = () => {
 
       <div className="flex gap-3">
         <a href="https://github.com/abderrahmenlamloumi" target="_blank" rel="noreferrer" className="social-icon" aria-label="GitHub profile">
-          <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
+          <img src={`${import.meta.env.BASE_URL}assets/github.svg`} alt="github" className="w-1/2 h-1/2" />
         </a>
         <a href="https://www.linkedin.com/in/abderrahmen-lamloumi-6282a9294/" target="_blank" rel="noreferrer" className="social-icon text-white font-bold text-xl" aria-label="LinkedIn profile">
           in

@@ -1,3 +1,5 @@
+const ASSETS_BASE = import.meta.env.BASE_URL || '/';
+
 export const navLinks = [
   { id: 1, name: 'Home', href: '#home' },
   { id: 2, name: 'About', href: '#about' },
@@ -11,7 +13,7 @@ export const Myexploration = [
     id: 1,
     name: 'OrionDB',
     position: 'Go time-series ingestion engine',
-    img: 'assets/grid1.png',
+    img: `${ASSETS_BASE}assets/grid1.png`,
     review:
       'A Go-based time-series ingestion engine built from first principles, exploring the systems trade-offs behind modern observability platforms.',
     links: [
@@ -25,7 +27,7 @@ export const Myexploration = [
     id: 2,
     name: 'Databricks Data Engineer Associate',
     position: 'Certification in progress',
-    img: 'assets/databricks.png',
+    img: `${ASSETS_BASE}assets/databricks.png`,
     review:
       'Preparing for the Databricks Data Engineer Associate certification while exploring cloud, infrastructure, and MLOps.',
     links: [
@@ -59,7 +61,7 @@ export const Myexploration = [
     id: 3,
     name: 'System design study',
     position: 'Distributed systems study notes',
-    img: 'assets/sd.png',
+    img: `${ASSETS_BASE}assets/sd.png`,
     review:
       'Notes from studying scalable architectures, APIs, storage, queues, and the engineering decisions that make systems dependable.',
     links: [
@@ -85,7 +87,7 @@ export const Myexploration = [
     id: 4,
     name: 'NeetCode submissions',
     position: 'Algorithms and problem solving',
-    img: 'assets/leet.png',
+    img: `${ASSETS_BASE}assets/leet.png`,
     review:
       'A public collection of NeetCode problem submissions used to sharpen algorithmic thinking and write clearer, more reliable code.',
     links: [
@@ -105,13 +107,13 @@ const allProjects = [
       'OrionDB explores zero-allocation OTLP ingestion, lock-free MPMC ring buffers, Roaring Bitmap tag indexes, and an LSM-based storage engine with an append-only WAL, MemTables, SSTables, and compaction.',
     href: 'https://github.com/abderrahmenlamloumi/Orion-Collector',
     docs: 'https://abderrahmenlamloumi.github.io/OrionDB/',
-    texture: '/textures/project/project1.mp4',
+    texture: `${ASSETS_BASE}textures/project/project1.mp4`,
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight1.png`,
     tags: [
       {
         id: 1,
@@ -142,13 +144,13 @@ const allProjects = [
     subdesc:
       'Each submission is a small exercise in correctness, complexity, and communicating an idea through code.',
     href: 'https://github.com/abderrahmenlamloumi/neetcode-submissions',
-    texture: '/textures/project/project2.mp4',
+    texture: `${ASSETS_BASE}textures/project/project2.mp4`,
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight2.png`,
     tags: [
       {
         id: 1,
@@ -179,7 +181,7 @@ const allProjects = [
     subdesc:
       'Topics include distributed systems, storage, communication patterns, and the trade-offs behind production-ready designs.',
     href: 'https://github.com/abderrahmenlamloumi/system-design-notes',
-    texture: '/textures/project/project3.mp4',
+    texture: `${ASSETS_BASE}textures/project/project3.mp4`,
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -187,7 +189,7 @@ const allProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/assets/spotlight3.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight3.png`,
     tags: [
       {
         id: 1,
@@ -218,13 +220,13 @@ const allProjects = [
     subdesc:
       'I enjoy moving between models, data pipelines, and the backend systems that make intelligent products dependable.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project4.mp4',
+    texture: `${ASSETS_BASE}textures/project/project4.mp4`,
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
-    spotlight: '/assets/spotlight4.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight4.png`,
     tags: [
       {
         id: 1,
@@ -255,13 +257,13 @@ const allProjects = [
     subdesc:
       'My work sits at the intersection of software engineering, data modeling, and continuous improvement.',
     href: 'https://www.se.com/',
-    texture: '/textures/project/project5.mp4',
+    texture: `${ASSETS_BASE}textures/project/project5.mp4`,
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',
       boxShadow: '0px 0px 60px 0px #635BFF4D',
     },
-    spotlight: '/assets/spotlight5.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight5.png`,
     tags: [
       {
         id: 1,
@@ -290,14 +292,14 @@ const allProjects = [
     title: 'Tiny Dungeon',
     desc: 'A compact game project focused on gameplay loops, dungeon exploration, and modular design.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+    texture: `${ASSETS_BASE}textures/project/project1.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo1.png`,
     logoStyle: {
       backgroundColor: '#302116',
       border: '0.2px solid #5a3923',
       boxShadow: '0px 0px 60px 0px #d977064d',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight1.png`,
     tags: [
       {
         id: 1,
@@ -323,14 +325,14 @@ const allProjects = [
     subdesc:
       'The project documents the problem framing, data preparation, feature choices, evaluation approach, Using at the time the new RAG technology.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/nsigma.png',
+    texture: `${ASSETS_BASE}textures/project/project5.mp4`,
+    logo: `${ASSETS_BASE}assets/nsigma.png`,
     logoStyle: {
       backgroundColor: '#1e293b',
       border: '0.2px solid #475569',
       boxShadow: '0px 0px 60px 0px #38bdf84d',
     },
-    spotlight: '/assets/spotlight5.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight5.png`,
     tags: [
       {
         id: 1,
@@ -357,13 +359,13 @@ const allProjects = [
       'The compiler supports typed variables, arithmetic and boolean expressions, control flow, I/O, classes, inheritance, assembly generation, runtime checks, and optional extensions such as arrays, strings, math, assertions, and graphics.',
     href: 'https://github.com/abderrahmenlamloumi/Deca-Compiler-Java',
     docs: 'https://abderrahmenlamloumi.github.io/Deca-Compiler-Java/',
-    texture: '/textures/project/project2.mp4',
+    texture: `${ASSETS_BASE}textures/project/project2.mp4`,
     logoStyle: {
       backgroundColor: '#172337',
       border: '0.2px solid #29456b',
       boxShadow: '0px 0px 60px 0px #2563eb4d',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight2.png`,
     tags: [
       {
         id: 1,
@@ -389,14 +391,14 @@ const allProjects = [
     subdesc:
       'Bankify combines a React frontend with an Express backend, SQLite persistence, ORM-based data access, authentication, and REST API workflows.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project3.mp4',
-    logo: '/assets/project-logo3.png',
+    texture: `${ASSETS_BASE}textures/project/project3.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo3.png`,
     logoStyle: {
       backgroundColor: '#12352d',
       border: '0.2px solid #1f8069',
       boxShadow: '0px 0px 60px 0px #10b9814d',
     },
-    spotlight: '/assets/spotlight3.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight3.png`,
     tags: [
       {
         id: 1,
@@ -422,13 +424,13 @@ const allProjects = [
     subdesc:
       'The project stores item records in SQLite and makes it easy to query by station, date, and category through a simple REST API.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project5.mp4',
+    texture: `${ASSETS_BASE}textures/project/project5.mp4`,
     logoStyle: {
       backgroundColor: '#16212b',
       border: '0.2px solid #264766',
       boxShadow: '0px 0px 60px 0px #38bdf84d',
     },
-    spotlight: '/assets/spotlight5.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight5.png`,
     tags: [
       {
         id: 1,
@@ -459,14 +461,14 @@ const allProjects = [
     subdesc:
       'The project includes a VHDL processor, RISC-V program compilation, automated tests, waveform simulation, and FPGA synthesis through Make-based flows.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
+    texture: `${ASSETS_BASE}textures/project/project4.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo4.png`,
     logoStyle: {
       backgroundColor: '#202447',
       border: '0.2px solid #4f5ba8',
       boxShadow: '0px 0px 60px 0px #6366f14d',
     },
-    spotlight: '/assets/spotlight4.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight4.png`,
     tags: [
       {
         id: 1,
@@ -492,14 +494,14 @@ const allProjects = [
     subdesc:
       'The project combines VHDL, Vivado build flows, simulation, memory initialization, and automated hardware tests.',
     href: 'https://gitlab.ensimag.fr/cep_deploy/AO-PROJET-24-25/Students/karmouah_lamlouma',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+    texture: `${ASSETS_BASE}textures/project/project1.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo1.png`,
     logoStyle: {
       backgroundColor: '#241c12',
       border: '0.2px solid #6b4f2a',
       boxShadow: '0px 0px 60px 0px #d977064d',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight1.png`,
     tags: [
       {
         id: 1,
@@ -525,14 +527,14 @@ const allProjects = [
     subdesc:
       'The Python project combines document preprocessing, vector search, language models, and a command-line interface.',
     href: 'https://github.com/abderrahmenlamloumi?tab=repositories',
-    texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
+    texture: `${ASSETS_BASE}textures/project/project2.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo2.png`,
     logoStyle: {
       backgroundColor: '#172337',
       border: '0.2px solid #29456b',
       boxShadow: '0px 0px 60px 0px #2563eb4d',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight2.png`,
     tags: [
       {
         id: 1,
@@ -559,14 +561,14 @@ const allProjects = [
     subdesc:
       'The C and assembly code explores bootstrapping, scheduling, serial communication, keyboard input, debugging, and protected-mode systems programming.',
     href: 'https://gitlab.ensimag.fr/celdrato_lamlouma/psys-base',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/project-logo5.png',
+    texture: `${ASSETS_BASE}textures/project/project5.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo5.png`,
     logoStyle: {
       backgroundColor: '#1c1a43',
       border: '0.2px solid #252262',
       boxShadow: '0px 0px 60px 0px #635bff4d',
     },
-    spotlight: '/assets/spotlight5.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight5.png`,
     tags: [
       {
         id: 1,
@@ -592,14 +594,14 @@ const allProjects = [
     subdesc:
       'The project focuses on hashing, reduction chains, table generation, attack workflows, and incremental POSIX builds.',
     href: 'https://gitlab.ensimag.fr/frevillc/rainbow-table',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+    texture: `${ASSETS_BASE}textures/project/project1.mp4`,
+    logo: `${ASSETS_BASE}assets/project-logo1.png`,
     logoStyle: {
       backgroundColor: '#302116',
       border: '0.2px solid #5a3923',
       boxShadow: '0px 0px 60px 0px #d977064d',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: `${ASSETS_BASE}assets/spotlight1.png`,
     tags: [
       {
         id: 1,
@@ -708,7 +710,7 @@ export const workExperiences = [
     duration: '3-year program · Since September 2024',
     title:
       'Developing internal tools within a model-based system while learning how software engineering and data modeling support industrial products within energy management and automation environment.',
-    icon: '/assets/se.png',
+    icon: `${ASSETS_BASE}assets/se.png`,
     animation: 'victory',
     group: 'schneider',
     link: 'https://www.se.com/fr/fr/'
@@ -720,7 +722,7 @@ export const workExperiences = [
     duration: 'June 2026 – September 2026',
     title:
       'Working on data engineering for building equipment in EcoStruxure, mapping domain ontologies and enhancing an automated label-tagging feature across RDF, OWL, and SHACL.',
-    icon: '/assets/se.png',
+    icon: `${ASSETS_BASE}assets/se.png`,
     animation: 'victory',
     group: 'schneider',
     link: 'https://www.se.com/in/en/'
@@ -732,7 +734,7 @@ export const workExperiences = [
     duration: '4 months · 2022',
     title:
       'Exploring backend development, machine learning, data science, and system design through focused open-source projects.',
-    icon: '/assets/sg.png',
+    icon: `${ASSETS_BASE}assets/sg.png`,
     link: 'https://www.societegenerale.com/'
   },
 ];
@@ -745,7 +747,7 @@ export const education = [
     duration: '3 years · 2024/2027',
     title:
       'Building a strong foundation across computer science, algorithms, systems, data, and the mathematical tools behind modern computing.',
-    icon: '/assets/ensimag.png',
+    icon: `${ASSETS_BASE}assets/ensimag.png`,
     link: 'https://ensimag.grenoble-inp.fr/',
 
   },
@@ -756,7 +758,7 @@ export const education = [
     duration: '2 years · 2022/2024',
     title:
       'Completed a two-year integrated preparatory program focused on mathematics, science, and the foundations needed for engineering studies toping 5%.',
-    icon: '/assets/polytech.png',
+    icon: `${ASSETS_BASE}assets/polytech.png`,
     link: 'https://polytech.grenoble-inp.fr/',
 
   },
@@ -768,7 +770,7 @@ export const hackathons = [
     name: 'GreHack',
     result: 'Rank 3/38',
     year: '2026',
-    icon: '/assets/grehack.png',
+    icon: `${ASSETS_BASE}assets/grehack.png`,
   },
 
   {
@@ -776,7 +778,7 @@ export const hackathons = [
     name: 'Nsigma Machine Learning Hackathon',
     result: 'Rank 7/25',
     year: '2025',
-    icon: '/assets/nsigma.png',
+    icon: `${ASSETS_BASE}assets/nsigma.png`,
   },
 
 ];
