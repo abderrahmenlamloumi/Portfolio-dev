@@ -90,8 +90,8 @@ const About = () => {
 
             <div className="flex flex-col gap-4 mt-6">
               <a
-                href={`${import.meta.env.BASE_URL}assets/Abderrahmen-Lamloumi-Resume.pdf`}
-                download="Abderrahmen-Lamloumi-Resume.pdf"
+                href={`${import.meta.env.BASE_URL}assets/Abderrahmen_LAMLOUMI_RESUME.pdf`}
+                download="Abderrahmen_LAMLOUMI_RESUME.pdf"
                 className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition-colors"
               >
                 <span>🇬🇧</span>
