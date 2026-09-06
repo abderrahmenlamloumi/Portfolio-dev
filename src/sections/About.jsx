@@ -97,6 +97,14 @@ const About = () => {
                 <span>🇬🇧</span>
                 <span>{t.about.resumeEn}</span>
               </a>
+              <a
+                href={`${import.meta.env.BASE_URL}assets/Abderrahmen_LAMLOUMI_CV_FR.pdf`}
+                download="Abderrahmen_LAMLOUMI_CV_FR.pdf"
+                className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition-colors"
+              >
+                <span>🇫🇷</span>
+                <span>{t.about.resumeFr || 'CV (FR)'}</span>
+              </a>
             </div>
           </div>
         </div>
