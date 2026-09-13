@@ -43,7 +43,7 @@ const Projects = () => {
     <section className="c-space my-20" id="projects">
       <div className="flex flex-wrap items-center justify-between gap-5">
         <p className="head-text">{t.projectsTitle}</p>
-        <a href="/projects" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
+        <a href={`${ASSETS_BASE}projects`} className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
           <span>{t.viewAllProjects}</span>
         </a>
       </div>

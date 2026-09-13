@@ -12,10 +12,11 @@ import WorkExperience from './sections/Experience.jsx';
 import { LanguageProvider } from './context/LanguageContext.jsx';
 
 const App = () => {
-  const [isAllProjectsPage, setIsAllProjectsPage] = useState(() => window.location.pathname === '/projects');
+  const isProjectsPath = (p) => p && p.endsWith('/projects');
+  const [isAllProjectsPage, setIsAllProjectsPage] = useState(() => isProjectsPath(window.location.pathname));
 
   useEffect(() => {
-    const handlePopState = () => setIsAllProjectsPage(window.location.pathname === '/projects');
+    const handlePopState = () => setIsAllProjectsPage(isProjectsPath(window.location.pathname));
     window.addEventListener('popstate', handlePopState);
 
     return () => window.removeEventListener('popstate', handlePopState);
