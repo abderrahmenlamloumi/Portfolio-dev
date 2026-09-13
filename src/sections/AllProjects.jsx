@@ -1,19 +1,21 @@
 import { myProjects } from '../constants/index.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import getTagIcon from '../utils/getTagIcon.js';
+import { getHomeLink } from '../utils/projectRoutes.js';
 
 const AllProjects = () => {
   const { t } = useLanguage();
+  const homeLink = getHomeLink(import.meta.env.BASE_URL || '/');
 
   return (
     <main className="min-h-screen max-w-7xl mx-auto px-5 sm:px-10 py-28">
       <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
         <div>
           <a
-            href="/"
+            href={homeLink}
             onClick={(event) => {
               event.preventDefault();
-              window.location.assign('/');
+              window.location.assign(homeLink);
             }}
             className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8">
             <span aria-hidden="true">&larr;</span>

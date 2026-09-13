@@ -10,16 +10,25 @@ import Projects from './sections/Projects.jsx';
 import AllProjects from './sections/AllProjects.jsx';
 import WorkExperience from './sections/Experience.jsx';
 import { LanguageProvider } from './context/LanguageContext.jsx';
+import { isAllProjectsRoute } from './utils/projectRoutes.js';
 
 const App = () => {
-  const isProjectsPath = (p) => p && p.endsWith('/projects');
-  const [isAllProjectsPage, setIsAllProjectsPage] = useState(() => isProjectsPath(window.location.pathname));
+  const [isAllProjectsPage, setIsAllProjectsPage] = useState(() =>
+    isAllProjectsRoute(window.location.pathname, window.location.hash)
+  );
 
   useEffect(() => {
-    const handlePopState = () => setIsAllProjectsPage(isProjectsPath(window.location.pathname));
-    window.addEventListener('popstate', handlePopState);
+    const handleRouteChange = () => {
+      setIsAllProjectsPage(isAllProjectsRoute(window.location.pathname, window.location.hash));
+    };
 
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handleRouteChange);
+    window.addEventListener('popstate', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange);
+      window.removeEventListener('popstate', handleRouteChange);
+    };
   }, []);
 
   if (isAllProjectsPage) {
