@@ -12,6 +12,7 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: '',
     message: '',
+    botcheck: false,
   });
 
   const [isSending, setIsSending] = useState(false);
@@ -47,6 +48,7 @@ const Contact = () => {
           subject: `Portfolio message from ${form.name}`,
           from_name: form.name,
           message: form.message,
+          botcheck: form.botcheck,
         }),
       });
 
@@ -65,6 +67,7 @@ const Contact = () => {
       setForm({
         name: '',
         message: '',
+        botcheck: false,
       });
     } catch (error) {
       console.error(error);
@@ -96,6 +99,16 @@ const Contact = () => {
           <p className="text-lg text-white-600 mt-3">{t.contact.intro}</p>
 
           <form onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
+            <input
+              type="checkbox"
+              name="botcheck"
+              checked={form.botcheck}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+            />
+
             <label className="space-y-3">
               <span className="field-label">{t.contact.fullName}</span>
 
