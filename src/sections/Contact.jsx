@@ -17,10 +17,10 @@ const Contact = () => {
 
   const [isSending, setIsSending] = useState(false);
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target }) => {
     setForm((prev) => ({
       ...prev,
-      [name]: value,
+      [target.name]: target.type === 'checkbox' ? target.checked : target.value,
     }));
   };
 
@@ -31,8 +31,9 @@ const Contact = () => {
 
     setIsSending(true);
 
-      try {
+    try {
       if (!accessKey) {
+        console.error('Contact form is unavailable: VITE_WEB3FORMS_ACCESS_KEY is undefined.');
         showAlert({ show: true, text: t.contact.errorNoKey || 'Contact form is unavailable.', type: 'error' });
         return;
       }
@@ -54,7 +55,11 @@ const Contact = () => {
 
       const data = await response.json();
 
-      if (!data.success) {
+      if (!response.ok || !data.success) {
+        console.error('Web3Forms rejected the contact submission.', {
+          status: response.status,
+          message: data.message,
+        });
         throw new Error(data.message || 'Failed to send message.');
       }
 

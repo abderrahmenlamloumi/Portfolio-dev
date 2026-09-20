@@ -4,7 +4,7 @@ const translations = {
   en: {
     nav: { home: 'Home', about: 'About', projects: 'Projects', contact: 'Contact', background: 'Background', menu: 'Open menu', close: 'Close menu' },
     heroGreeting: 'Hi, I am Abderrahmen Lamloumi',
-    heroTagline: 'Software engineer in training, building systems that matter.',
+    heroTagline: 'Software engineer, building systems that matter.',
     explore: 'Explore my work',
     about: {
       introTitle: 'A bit about me',
