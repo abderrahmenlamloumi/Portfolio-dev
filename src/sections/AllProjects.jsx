@@ -45,7 +45,7 @@ const AllProjects = () => {
                   <p className="text-neutral-500 mt-3 text-sm leading-6">{projectCopy.subdesc || project.subdesc}</p>
                 </div>
 
-                <div className="flex items-end justify-between gap-4 pt-2">
+                <div className="relative z-10 flex flex-col items-stretch gap-4 pt-2 sm:flex-row sm:items-end sm:justify-between">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
@@ -57,7 +57,7 @@ const AllProjects = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex flex-wrap justify-end gap-x-4 gap-y-2">
+                  <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 sm:justify-end">
                     <a href={project.href} target="_blank" rel="noreferrer" className="shrink-0 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition-colors" aria-label={`${t.repository}: ${projectCopy.title || project.title}`}>
                       <span>{t.repository}</span>
                       <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow" className="w-3 h-3" />
