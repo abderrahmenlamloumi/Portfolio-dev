@@ -560,7 +560,7 @@ const allProjects = [
     desc: 'A low-level operating-system project implementing kernel services for processes, memory, interrupts, and device I/O.',
     subdesc:
       'The C and assembly code explores bootstrapping, scheduling, serial communication, keyboard input, debugging, and protected-mode systems programming.',
-    href: 'https://gitlab.ensimag.fr/celdrato_lamlouma/psys-base',
+    href: 'https://github.com/abderrahmenlamloumi/Emax-kernel',
     texture: `${ASSETS_BASE}textures/project/project5.mp4`,
     logo: `${ASSETS_BASE}assets/project-logo5.png`,
     logoStyle: {
@@ -593,7 +593,7 @@ const allProjects = [
     desc: 'A C11 implementation that generates rainbow tables and uses them to recover possible preimages of hashed values.',
     subdesc:
       'The project focuses on hashing, reduction chains, table generation, attack workflows, and incremental POSIX builds.',
-    href: 'https://gitlab.ensimag.fr/frevillc/rainbow-table',
+    href: 'https://github.com/abderrahmenlamloumi/Rainbow-Table',
     texture: `${ASSETS_BASE}textures/project/project1.mp4`,
     logo: `${ASSETS_BASE}assets/project-logo1.png`,
     logoStyle: {
