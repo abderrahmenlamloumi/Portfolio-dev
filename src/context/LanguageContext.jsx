@@ -22,8 +22,10 @@ const translations = {
       buildingText:
         "From OrionDB's lock-free ingestion experiments to algorithm practice and system design notes, I use projects to learn in public and improve one decision at a time.",
       resumeTitle: 'My Resume',
-      resumeText: 'You can download my resume in English.',
+      resumeText: 'View or download my resume in English and French.',
       resumeEn: 'Download Resume (English)',
+      resumeView: 'View',
+      resumeDownload: 'Download',
       contactCard: 'Contact me',
     },
     projectsTitle: 'Projects',
@@ -99,8 +101,10 @@ const translations = {
       buildingText:
         "Entre les expérimentations d'ingestion sans verrou d'OrionDB, l'algorithmique et la conception de systèmes, j'apprends en construisant des projets concrets.",
       resumeTitle: 'Mon CV',
-      resumeText: 'Téléchargez mon resume en anglais.',
+      resumeText: 'Consultez ou téléchargez mes CV en anglais et en français.',
       resumeEn: 'Télécharger le resume (anglais)',
+      resumeView: 'Voir',
+      resumeDownload: 'Télécharger',
       contactCard: 'Me contacter',
     },
     projectsTitle: 'Projets',
