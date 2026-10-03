@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { myProjects } from '../constants/index.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import getTagIcon from '../utils/getTagIcon.js';
@@ -6,6 +8,10 @@ import { getHomeLink } from '../utils/projectRoutes.js';
 const AllProjects = () => {
   const { t } = useLanguage();
   const homeLink = getHomeLink(import.meta.env.BASE_URL || '/');
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
 
   return (
     <main className="min-h-screen max-w-7xl mx-auto px-5 sm:px-10 py-28">
